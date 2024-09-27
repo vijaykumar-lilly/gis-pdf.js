@@ -133,7 +133,7 @@ describe("api", function () {
 
     it("creates pdf doc from URL-object", async function () {
       const urlObj = isNodeJS
-        ? new URL(`http://127.0.0.1:${tempServer.port}/${basicApiFileName}`)
+        ? new URL(`http://0.0.0.0:${tempServer.port}/${basicApiFileName}`)
         : new URL(TEST_PDFS_PATH + basicApiFileName, window.location);
 
       const loadingTask = getDocument(urlObj);
@@ -2949,8 +2949,8 @@ describe("api", function () {
         const params = buildGetDocumentParams(filename, options);
         const url = new URL(params.url);
         if (url.hostname === "localhost") {
-          url.hostname = "127.0.0.1";
-        } else if (params.url.hostname === "127.0.0.1") {
+          url.hostname = "0.0.0.0";
+        } else if (params.url.hostname === "0.0.0.0") {
           url.hostname = "localhost";
         } else {
           pending("Can only run cross-origin test on localhost!");

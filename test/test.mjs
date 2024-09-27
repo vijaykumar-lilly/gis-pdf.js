@@ -1114,7 +1114,7 @@ async function main() {
 var server;
 var sessions = [];
 var onAllSessionsClosed;
-var host = "127.0.0.1";
+var host = "0.0.0.0";
 var options = parseOptions();
 var stats;
 var tempDir = null;

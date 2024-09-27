@@ -117,7 +117,7 @@ class WebServer {
     } catch (e) {
       if (e instanceof URIError) {
         // If the URI cannot be decoded, a `URIError` is thrown. This happens
-        // for malformed URIs such as `http://localhost:8888/%s%s` and should be
+        // for malformed URIs such as `http://localhost:80/%s%s` and should be
         // handled as a bad request.
         response.writeHead(400);
         response.end("Bad request", "utf8");
@@ -338,7 +338,7 @@ class WebServer {
 // This supports the "Cross-origin" test in test/unit/api_spec.js
 // It is here instead of test.js so that when the test will still complete as
 // expected if the user does "gulp server" and then visits
-// http://localhost:8888/test/unit/unit_test.html?spec=Cross-origin
+// http://localhost:80/test/unit/unit_test.html?spec=Cross-origin
 function crossOriginHandler(url, request, response) {
   if (url.pathname === "/test/pdfs/basicapi.pdf") {
     if (url.searchParams.get("cors") === "withCredentials") {

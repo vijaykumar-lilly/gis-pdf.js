@@ -47,7 +47,7 @@ describe("node_stream", function () {
 
   it("read both http(s) and filesystem pdf files", async function () {
     const stream1 = new PDFNodeStream({
-      url: `http://127.0.0.1:${tempServer.port}/tracemonkey.pdf`,
+      url: `http://0.0.0.0:${tempServer.port}/tracemonkey.pdf`,
       rangeChunkSize: 65536,
       disableStream: true,
       disableRange: true,
@@ -109,7 +109,7 @@ describe("node_stream", function () {
   it("read custom ranges for both http(s) and filesystem urls", async function () {
     const rangeSize = 32768;
     const stream1 = new PDFNodeStream({
-      url: `http://127.0.0.1:${tempServer.port}/tracemonkey.pdf`,
+      url: `http://0.0.0.0:${tempServer.port}/tracemonkey.pdf`,
       length: pdfLength,
       rangeChunkSize: rangeSize,
       disableStream: true,

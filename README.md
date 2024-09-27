@@ -67,13 +67,13 @@ PDF files using a `file://` URL. Run:
 
 and then you can open:
 
-+ http://localhost:8888/web/viewer.html
++ http://localhost:80/web/viewer.html
 
 Please keep in mind that this assumes the latest version of Mozilla Firefox; refer to [Building PDF.js](https://github.com/mozilla/pdf.js/blob/master/README.md#building-pdfjs) for non-development usage of the PDF.js library.
 
 It is also possible to view all test PDF files on the right side by opening:
 
-+ http://localhost:8888/test/pdfs/?frame
++ http://localhost:80/test/pdfs/?frame
 
 ## Building PDF.js
 

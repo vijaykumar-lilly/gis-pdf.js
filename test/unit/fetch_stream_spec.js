@@ -22,7 +22,7 @@ describe("fetch_stream", function () {
 
   function getPdfUrl() {
     return isNodeJS
-      ? `http://127.0.0.1:${tempServer.port}/tracemonkey.pdf`
+      ? `http://0.0.0.0:${tempServer.port}/tracemonkey.pdf`
       : new URL("../pdfs/tracemonkey.pdf", window.location).href;
   }
   const pdfLength = 1016315;

@@ -12,7 +12,7 @@ Install the example dependencies and build the project:
     $ ./node_modules/webpack/bin/webpack.js
 
 You can observe the build results by running `gulp server` and navigating to
-http://localhost:8888/examples/webpack/index.html.
+http://localhost:80/examples/webpack/index.html.
 
 Refer to the `main.js` and `webpack.config.js` files for the source code.
 Note that PDF.js packaging requires packaging of the main application and
